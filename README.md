@@ -1,5 +1,9 @@
-# idk-zig
+# idk-zig ⚡️
 
+### Aims
+
+- Learn some Zig
+- Learn to be a better engineer
 
 ### How to run
 
