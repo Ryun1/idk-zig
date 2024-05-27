@@ -7,6 +7,18 @@
 
 ### How to run
 
+#### Run
+
+needs a main function
+
 ```zig
 zig run main.zig
+```
+
+#### Test
+
+needs a test function
+
+```zig
+zig test main.zig
 ```
