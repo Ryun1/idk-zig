@@ -1,0 +1,22 @@
+name: Run Zig Tests
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+    test:
+      strategy:
+        matrix:
+          os: [ubuntu-latest, macos-latest]
+      runs-on: ${{matrix.os}}
+      steps:
+        - uses: actions/checkout@v2
+        - uses: goto-bus-stop/setup-zig@v2
+        - name: Run tests on all .zig files
+          run: |
+            for file in *.zig; do
+              zig test "$file"
+            done
